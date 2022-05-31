@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box_wrap{
+            width: 100%;
+            height: 500px;
+            background-color: gray;            
+            display: flex;
+            /* position: relative;
+            overflow: hidden; */
+            justify-content: left;
+            align-items: center;
+        }
+
+        .box_1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            animation: move;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            /* animation-direction: alternate; */
+            text-align: center;
+            line-height: 100px;           
+        }
+
+        .box_2{
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            animation: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            /* animation-direction: alternate; */
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .box_3{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation: move;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            /* animation-direction: alternate; */
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .on{
+            display: none;
+        }
+
+        @keyframes move{
+            0%{
+                transform: translate(0,0);
+            }
+
+            50%{
+                transform: translate(1000px, 0) rotate(360deg);
+            }
+
+            100%{
+                background-color: gold;
+                border-radius: 50%;
+                transform: translate(1920px, 0px);
+            }
+        } 
+        
+    
+    </style>
+</head>
+<body>
+    <div class="box_wrap">
+        <div class="box box_1">1</div>
+        <div class="box box_2">2</div>
+        <div class="box box_3">3</div>
+    </div>
+    
+    <script>
+
+        (function(){
+
+            const wrapEl = document.querySelector('.box_wrap');
+           
+
+            const handleclick = (e) => {
+                if(e.target.classList.contains('box')){
+                    e.target.classList.add('on');
+                }
+            }
+            wrapEl.addEventListener('click', handleclick);
+        })()
+
+
+        
+        
+    </script>
+    
+</body>
+</html>
