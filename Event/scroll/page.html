@@ -1,0 +1,92 @@
+!<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            height: 300vh;
+            float: left;
+        }
+
+        header{
+            width: 100%;
+            height: 80px;
+            background-color: lightgray;
+            position: fixed;
+            top: 0;
+            left: 0;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .container{
+            width: 1000px;
+            height: 500px;
+            background-color: salmon;
+            margin: 200px auto;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+            margin: 0 auto;
+            transition-duration: 0.5s;
+        }
+
+
+        .active{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .round{
+            transform: scale(2);
+            border-radius: 50%;
+        }
+
+        .gage_wrap{
+            height: 5px;
+            background-color: lightblue;
+        }
+
+        .gage{
+            width: 0%;
+            height: 100%;
+            background-color: crimson;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <header>
+            <div class="gage_wrap">
+                <div class="gage"></div>
+            </div>
+        </header>
+
+        <div class="container"></div>
+
+        <div class="box"></div>
+
+    </div>
+    <!-- wrap end -->
+
+    
+
+
+    <script src="../../Event/scroll/js/pageEvent.js"></script>
+    <script src="../../Event/scroll/js/style.js"></script>
+</body>
