@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+
+    <script>
+        // *로그인
+        // -아이디
+        // =>2자리 이상
+        // =>아이디가 있는지 없는지
+        // =>특수문자 허용 범위
+        // =>메일형식
+        // =>영어랑 숫자랑 혼합
+        // => 기타등등
+
+        // -비빌번호
+        // =>8자리 이상
+        // =>비빌번호가 맞는지 아닌지
+        // =>8자리이상 특수문자 포함, 대문자 2개이상 포함
+        // =>영어랑 숫자랑 혼합
+        // =>기타등등
+
+        const num_1 = prompt("첫번째 숫자를 넣어주세요");
+        const num_2 = prompt("두번째 숫자를 넣어주세요");
+
+        if( num_1 > num_2){
+            document.write("첫번째 숫자가 큽니다");
+        }else if(num_1 < num_2){
+            document.write("두번째 숫자가 큽니다");
+        }else if(num_1 === num_2){
+            document.write("두 수가 같습니다");
+        }
+
+    </script>
+    
+</body>
+</html>
