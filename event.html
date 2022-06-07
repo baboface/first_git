@@ -85,15 +85,29 @@
             // box_2.addEventListener('click', handleBox_2);
             // box_3.addEventListener('click', handleBox_3);
 
-            const boxAll = document.querySelectorAll('.box');
+            // const boxAll = document.querySelectorAll('.box');
 
-            for(let i = 0; i < boxAll.length; i++){
-              boxAll[i].addEventListener('click',() => {
-                  boxAll[i].classList.toggle('on')
-              })
-            }
+            // for(let i = 0; i < boxAll.length; i++){
+            //   boxAll[i].addEventListener('click',() => {
+            //       boxAll[i].classList.toggle('on')
+            //   })
+            // }
 
             // boxAll[i].addEventListener('click', handleBox);
+
+            const boxWrap = document.querySelector('.box_wrap');
+
+            const handleClick = (e) => {
+                // console.log(e.target);
+                // e.target.classList.toggle('on');
+                // console.log(e.target.classList.contains('box'));
+                if(e.target.classList.contains('box')){
+                    e.target.classList.toggle('on')
+                }
+            }
+
+            boxWrap.addEventListener('click',handleClick)
+
 
     </script>
 
